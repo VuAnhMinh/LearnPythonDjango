@@ -53,9 +53,9 @@
               <a href="/">MY<span>SITE</span> </a>
             </div>
             <ul class="navigation">
-              <a href="#"> <li>Home</li> </a>
-              <a href="#"> <li>Blog</li> </a>
-              <a href="#"> <li>Contact</li> </a>
+              <a href="/"> <li>Home</li> </a>
+              <a href="{% url 'blog_home' %}"> <li>Blog</li> </a>
+              <a href="{% url 'contact_home' %}"> <li>Contact</li> </a>
               {% if user.username %}
               <a><li>Hello {{user.username}}</li></a>
               <a href="{% url 'logout' %}"> <li>Logout</li></a>
