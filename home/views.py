@@ -4,7 +4,7 @@ from .forms import RegistrationForm
 # Create your views here.
 
 def index(request):
-    return render(request,'pages/home.html')
+    return render(request,'pages/index.html')
 def contact(request):
     return render(request,'pages/contact.html')
 #def blog(request):

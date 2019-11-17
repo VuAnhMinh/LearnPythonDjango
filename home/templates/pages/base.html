@@ -27,86 +27,23 @@
   </style>
   </head>
   <body>
-    <div class="container-fluid" style="min-height:95%">
-      <!-- Header goes here-->
-      <div class="row">
-<!--
-        <div class="col-sm-2">
-          <center><img src="{% static "image/avatar.png" %}" class="responsive-img" style="max-height:150px">  </center>
-        </div>
-        <div class="col-sm-8">
-          <center> <h1>Blog làm từ python Django </h1> </center>
-        </div>
-        <div class="col-sm-2">
-          {% if user.username %}
-          <p>Xin chào {{user.username}}</p>
-          <p> <a href="{% url 'logout' %}">Đăng xuất</a> </p>
-          {% else %}
-          <a href="{% url 'register' %}">Đăng ký</a>  |  <a href="{% url 'login' %}">Đăng nhập</a>
-          {% endif %}
-        </div>
--->
+    <div style="min-height:95%">
 
-        <div class="header">
-          <div class="inner-header">
-            <div class="logo-container">
-              <a href="/">MY<span>SITE</span> </a>
-            </div>
-            <ul class="navigation">
-              <a href="/"> <li>Home</li> </a>
-              <a href="{% url 'blog_home' %}"> <li>Blog</li> </a>
-              <a href="{% url 'contact_home' %}"> <li>Contact</li> </a>
-              {% if user.username %}
-              <a><li>Hello {{user.username}}</li></a>
-              <a href="{% url 'logout' %}"> <li>Logout</li></a>
-              {% else %}
-              <a href="{% url 'register' %}"> <li>Register</li></a>
-              <a href="{% url 'login' %}"><li>Login</li></a>
-              {% endif %}
-            </ul>
-          </div>
-        </div>
-      </div>
-      <br>
 
-      <!-- Body goes here-->
-      <div class="row">
-        <div class="col-sm-2">
-          <div class="bs-sidebar">
-            <nav class="nav flex-column">
-            <a class="nav-link active" href="/">Trang chủ</a>
-            <a class="nav-link" href="{% url 'blog_home' %}">Blog</a>
-            <a class="nav-link" href="{% url 'contact_home' %}">Liên hệ</a>
-            </nav>
-          </div>
-        </div>
-        <div class="col-sm-10">
-          <div class="container-fluid">
-            {% block content %}
+      <!-- ------------ Header goes here ------------>
+      {% include "pages/header.html" %}
 
-            {% endblock %}
-          </div>
-        </div>
-      </div>
+
+      <!-- -------------- Body goes here ------------>
+      {% block content %}
+
+      {% endblock %}
+
     </div>
+
+    <!-- --------------- Footer goes here --------------- -->
     <footer>
-      <div class="footer-icons">
-        <a href="#" class = "footer-btn"> <i class="fab fa-facebook-f"></i> </a>
-        <a href="#" class = "footer-btn"> <i class="fab fa-twitter"></i> </a>
-        <a href="#" class = "footer-btn"> <i class="fab fa-github"></i> </a>
-        <a href="#" class = "footer-btn"> <i class="fab fa-skype"></i></i> </a>
-      </div>
-      <hr>
-      <div class="footer-menu">
-        <ul>
-          <li> <a href="#">Home</a> </li>
-          <li> <a href="#">Blog</a> </li>
-          <li> <a href="#">Contact</a> </li>
-        </ul>
-      </div>
-      <div class="footer-bottom">
-        <p>Designed by Vũ Ánh Minh via <a href="/">Learning Tutorial Point</a></p>
-      </div>
+      {% include "pages/footer.html" %}
     </footer>
   </body>
 </html>
