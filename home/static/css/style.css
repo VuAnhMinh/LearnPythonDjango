@@ -1,0 +1,374 @@
+
+
+*{
+  margin : 0;
+  padding: 0;
+  font-family: "Open Sans",sans-serif;
+  box-sizing: border-box;
+}
+/*
+.blog-content{
+  transition: 0.6s linear;
+  background: #273c75;
+}
+
+.product-card{
+  width : 400px;
+  background: #ecf0f1;
+  padding : 40px;
+  border-radius: 5%;
+  position: absolute;
+  left: 30%;
+  top: 0%;
+  transform : translate(0%, -15%);
+  text-transform: uppercase;
+}
+
+.product-card h1{
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+.product-card p{
+  font-size: 15px;
+  color : #bbb;
+}
+
+.product-pic
+{
+  width: 100%;
+  height : 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4%;
+  transition: 0.6s linear;
+}
+
+.product-color{
+  margin-bottom: 40px;
+  display:flex;
+  justify-content: center;
+}
+
+.product-color span
+{
+  width : 14px;
+  height : 14px;
+//  background : red;
+  margin : 7px 14px;
+  border-radius: 50%;
+  cursor : pointer;
+  position: relative;
+
+}
+.blue{
+  background : #273c75;
+}
+.black{
+  background: #2f3640;
+}
+.yellow{
+  background: #f6e58d;
+}
+.red{
+  background: #ff7979;
+}
+
+.product-color .active:after{
+  content : "";
+  width: 22px;
+  height : 22px;
+  box-sizing: border-box;
+  margin : 0px 14px;
+  border-radius: 50%;
+  position : absolute;
+  border: 2px solid #888;
+  top: -4px;
+  left : -18px;
+
+}
+
+.product-info{
+  display: flex;
+  align-items: center;
+}
+
+.product-price{
+  font-size: 26px;
+  color: #22a6b3;
+}
+
+.product-button{
+  margin-left: auto;
+  color: #22a6b3;
+  border : 2px solid;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  transition: 0.6s linear;
+}
+
+.product-button:hover{
+  transform: scale(1.06);
+}
+*/
+
+
+/* Header Style Here */
+.header{
+  width: 100%;
+  height : 60px;
+  display: flex;
+  background-color: #101010;
+
+}
+
+.inner-header{
+  height: 100%;
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+}
+
+.logo-container{
+  height: 100%;
+  display: table;
+  float: left;
+}
+
+.logo-container a{
+  color : white;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.logo-container a:hover{
+  text-decoration: none;
+}
+
+.logo-container a span{
+  font-weight: 800;
+  font-family: 'Montserrat';
+}
+
+.navigation {
+  float: right;
+  height: 100%;
+}
+
+.navigation a{
+  height: 100%;
+  display: table;
+  float: left;
+  padding: 0px 20px;
+}
+
+.navigation a:last-child{
+  padding-right: 0px;
+}
+
+.navigation a li{
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  color : white;
+  font-family: 'Montserrat';
+  font-size: 15px;
+}
+
+.navigation:hover a{
+  text-decoration: none;
+}
+
+.header-user{
+  display: block;
+  float: right;
+  height: 100%;
+}
+
+
+/*----------------- Footer Style -------------------*/
+footer{
+  background-color : #2c3e5021;
+}
+
+.footer-icons{
+  position: relative;
+  transform: translateY(50%);
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top : 90px;
+}
+
+.footer-btn{
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #f1f1f1;
+  margin : 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color : #3498db;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-btn i{
+  line-height: 90px;
+  font-size: 26px;
+  transition: 0.2s linear;
+}
+
+.footer-btn:hover i{
+  transform : scale(1.3);
+  color: #f1f1f1;
+}
+
+.footer-btn::before{
+  content : "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left : -110%;
+  top : 90%;
+}
+
+.footer-btn:hover:before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes aaa {
+  0%{
+    left: -110%;
+    top: 90%;
+  }50%{
+    left: 10%;
+    top: -30%;
+  }100%{
+    top: -10%;
+    left: -10%;
+  }
+
+}
+
+.footer-menu{
+  width : 100%;
+  height : 30px;
+  margin : auto;
+  margin-top : 20px;
+}
+
+.footer-menu ul{
+  margin : 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.footer-menu ul li{
+  display: inline-block;
+  margin : 0px 15px;
+}
+
+.footer-menu ul li a{
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color : #2c3e50;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.footer-bottom{
+  width: 100%;
+  height: 30px;
+  background-color: #101010;
+  margin-bottom: auto;
+  padding: 5px;
+  text-align: center;
+}
+
+.footer-bottom p{
+  margin-bottom: -1rem;
+  color: #fff;
+}
+
+.footer-bottom a{
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ----------------- Homepage Slider goes here ------------------- */
+slider{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #1f1f1f;
+  overflow: hidden;
+  position: absolute;
+}
+
+slider > *{
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #1f1f1f;
+  animation: slide 16s infinite;
+  overflow: hidden;
+}
+
+slide:nth-child(1){
+  left: 0%;
+  animation-delay: -1s;
+  background-size: cover;
+  background-position: center;
+}
+slide:nth-child(2){
+  left: 0%;
+  animation-delay: 3s;
+  background-size: cover;
+  background-position: center;
+}
+
+slide:nth-child(3){
+  left: 0%;
+  animation-delay: 7s;
+  background-size: cover;
+  background-position: center;
+}
+
+slide:nth-child(4){
+  left:0%;
+  animation-delay: 11s;
+  background-size: cover;
+  background-position: center;
+}
+
+slide p{
+  font-family: "Helvetica", sans-serif;
+  font-size: 70px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin-top: 340px;
+  color : #fff;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+@keyframes slide {
+  0% {left: 0%;}
+  20% {left: 0%;}
+  25% {left: -100%;}
+  45% {left: -100%;}
+  50% {left: -200%;}
+  70% {left: -200%;}
+  75% {left: -300%;}
+  95% {left: -300%;}
+}

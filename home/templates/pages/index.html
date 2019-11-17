@@ -1,0 +1,16 @@
+{% extends "pages/base.html" %}
+
+{% load static %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+  <slider>
+    <slide style="background-image: url('{% static "image/slide-1.png"%}')"> <p>Được viết bằng Python Django</p> </slide>
+    <slide style="background-image: url('{% static "image/slide-2.png"%}')"> <p>Slide này được thiết kế <br> với HTML CSS thuần</p> </slide>
+    <slide style="background-image: url('{% static "image/slide-3.png"%}')"> <p>Chúc bạn 1 ngày tốt lành</p> </slide>
+    <slide style="background-image: url('{% static "image/slide-4.png"%}')"> <p>Đây là blog của Vũ Ánh Minh</p> </slide>
+  </slider>
+{% endblock %}

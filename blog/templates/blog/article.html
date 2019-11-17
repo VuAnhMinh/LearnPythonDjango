@@ -1,0 +1,34 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+{{article.title}}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-10 offset-md-2">
+    <div class="container-fluid">
+      <h3><a href="{% url 'article_id' article.id %}"> {{article.title}}</a> </h3>
+      <h6>on {{article.date}}</h6>
+      <img src="{{article.image.url}}" alt="{{article.title}}">
+      {{article.body|safe|linebreaks}}
+
+      {% for comment  in article.comment.all %}
+        <h4> <strong>{{comment.author}}</strong> </h4>
+        <h6> <p>{{comment.date}}</p> </h6>
+        <p>{{comment.body|linebreaks}}</p>
+      {% endfor %}
+
+      {% if user.username %}
+        <form action="{% url 'article_id' article.id  %}" method="POST">
+          {% csrf_token %}
+          <p> <label>Bình luận</label> </p>
+          {{form.body}}
+          <br>
+          <input type="submit" name="comment" value="Bình luận">
+        </form>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}
