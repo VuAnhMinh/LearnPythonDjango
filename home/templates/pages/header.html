@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load cart_template_tags %}
 <!--
 <div class="row">
   <div class="col-sm-2">
@@ -26,10 +26,15 @@
       </div>
       <ul class="navigation">
         <a href="/"> <li>Home</li> </a>
+        <a href="{% url 'products:product_category' %}"> <li>Products</li> </a>
         <a href="{% url 'blog_home' %}"> <li>Blog</li> </a>
         <a href="{% url 'contact_home' %}"> <li>Contact</li> </a>
         {% if user.username %}
-        <a><li>Hello {{user.username}}</li></a>
+        <a href=" {% url 'products:order-summary' %} "><li>Hello {{user.username}} 
+          <i class="fas fa-shopping-cart"></i>
+          <span class="badge red z-depth-1 mr-1"> {{request.user|cart_item_count}}</span>
+        </li></a>
+
         <a href="{% url 'logout' %}"> <li>Logout</li></a>
         {% else %}
         <a href="{% url 'register' %}"> <li>Register</li></a>

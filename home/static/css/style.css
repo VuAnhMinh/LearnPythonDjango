@@ -1,9 +1,7 @@
-
-
-*{
-  margin : 0;
+* {
+  margin: 0;
   padding: 0;
-  font-family: "Open Sans",sans-serif;
+  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
 /*
@@ -112,31 +110,29 @@
 }
 */
 
-
 /* Header Style Here */
-.header{
+.header {
   width: 100%;
-  height : 60px;
+  height: 60px;
   display: flex;
   background-color: #101010;
-
 }
 
-.inner-header{
+.inner-header {
   height: 100%;
   width: 70%;
   display: block;
   margin: 0 auto;
 }
 
-.logo-container{
+.logo-container {
   height: 100%;
   display: table;
   float: left;
 }
 
-.logo-container a{
-  color : white;
+.logo-container a {
+  color: white;
   height: 100%;
   display: table-cell;
   vertical-align: middle;
@@ -144,13 +140,14 @@
   font-weight: 100;
 }
 
-.logo-container a:hover{
+.logo-container a:hover {
   text-decoration: none;
+  color: rgb(252, 62, 62);
 }
 
-.logo-container a span{
+.logo-container a span {
   font-weight: 800;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 .navigation {
@@ -158,134 +155,134 @@
   height: 100%;
 }
 
-.navigation a{
+.navigation a {
   height: 100%;
   display: table;
   float: left;
   padding: 0px 20px;
 }
 
-.navigation a:last-child{
+.navigation a:last-child {
   padding-right: 0px;
 }
 
-.navigation a li{
+.navigation a li {
   display: table-cell;
   vertical-align: middle;
   height: 100%;
-  color : white;
-  font-family: 'Montserrat';
+  color: white;
+  font-family: "Montserrat";
   font-size: 15px;
 }
 
-.navigation:hover a{
+.navigation:hover a {
   text-decoration: none;
 }
 
-.header-user{
+.header-user {
   display: block;
   float: right;
   height: 100%;
 }
 
-
 /*----------------- Footer Style -------------------*/
-footer{
-  background-color : #2c3e5021;
+footer {
+  background-color: #2c3e5021;
 }
 
-.footer-icons{
+.footer-icons {
   position: relative;
   transform: translateY(50%);
   width: 100%;
   text-align: center;
   margin-bottom: 50px;
-  margin-top : 90px;
+  margin-top: 90px;
 }
 
-.footer-btn{
+.footer-btn {
   display: inline-block;
   width: 90px;
   height: 90px;
   background: #f1f1f1;
-  margin : 10px;
+  margin: 10px;
   border-radius: 30%;
   box-shadow: 0 5px 15px -5px #00000070;
-  color : #3498db;
+  color: #3498db;
   overflow: hidden;
   position: relative;
 }
 
-.footer-btn i{
+.footer-btn i {
   line-height: 90px;
   font-size: 26px;
   transition: 0.2s linear;
 }
 
-.footer-btn:hover i{
-  transform : scale(1.3);
+.footer-btn:hover i {
+  transform: scale(1.3);
   color: #f1f1f1;
 }
 
-.footer-btn::before{
-  content : "";
+.footer-btn::before {
+  content: "";
   position: absolute;
   width: 120%;
   height: 120%;
   background: #3498db;
   transform: rotate(45deg);
-  left : -110%;
-  top : 90%;
+  left: -110%;
+  top: 90%;
 }
 
-.footer-btn:hover:before{
+.footer-btn:hover:before {
   animation: aaa 0.7s 1;
   top: -10%;
   left: -10%;
 }
 
 @keyframes aaa {
-  0%{
+  0% {
     left: -110%;
     top: 90%;
-  }50%{
+  }
+  50% {
     left: 10%;
     top: -30%;
-  }100%{
+  }
+  100% {
     top: -10%;
     left: -10%;
   }
-
 }
 
-.footer-menu{
-  width : 100%;
-  height : 30px;
-  margin : auto;
-  margin-top : 20px;
+.footer-menu {
+  width: 100%;
+  height: 30px;
+  margin: auto;
+  margin-top: 20px;
 }
 
-.footer-menu ul{
-  margin : 0px;
+.footer-menu ul {
+  margin: 0px;
   padding: 0px;
   text-align: center;
 }
 
-.footer-menu ul li{
+.footer-menu ul li {
   display: inline-block;
-  margin : 0px 15px;
+  margin: 0px 15px;
 }
 
-.footer-menu ul li a{
+.footer-menu ul li a {
   font-family: sans-serif;
   font-size: 16px;
   font-weight: 600;
-  color : #2c3e50;
+  color: #2c3e50;
   text-transform: uppercase;
   text-decoration: none;
 }
 
-.footer-bottom{
+.footer-bottom {
   width: 100%;
   height: 30px;
   background-color: #101010;
@@ -294,18 +291,18 @@ footer{
   text-align: center;
 }
 
-.footer-bottom p{
+.footer-bottom p {
   margin-bottom: -1rem;
   color: #fff;
 }
 
-.footer-bottom a{
+.footer-bottom a {
   text-decoration: none;
   color: #fff;
 }
 
 /* ----------------- Homepage Slider goes here ------------------- */
-slider{
+slider {
   display: block;
   width: 100%;
   height: 100%;
@@ -314,7 +311,7 @@ slider{
   position: absolute;
 }
 
-slider > *{
+slider > * {
   position: absolute;
   display: block;
   width: 100%;
@@ -324,51 +321,67 @@ slider > *{
   overflow: hidden;
 }
 
-slide:nth-child(1){
+slide:nth-child(1) {
   left: 0%;
   animation-delay: -1s;
   background-size: cover;
   background-position: center;
 }
-slide:nth-child(2){
+slide:nth-child(2) {
   left: 0%;
   animation-delay: 3s;
   background-size: cover;
   background-position: center;
 }
 
-slide:nth-child(3){
+slide:nth-child(3) {
   left: 0%;
   animation-delay: 7s;
   background-size: cover;
   background-position: center;
 }
 
-slide:nth-child(4){
-  left:0%;
+slide:nth-child(4) {
+  left: 0%;
   animation-delay: 11s;
   background-size: cover;
   background-position: center;
 }
 
-slide p{
+slide p {
   font-family: "Helvetica", sans-serif;
   font-size: 70px;
   text-align: center;
   display: inline-block;
   width: 100%;
   margin-top: 340px;
-  color : #fff;
+  color: #fff;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 @keyframes slide {
-  0% {left: 0%;}
-  20% {left: 0%;}
-  25% {left: -100%;}
-  45% {left: -100%;}
-  50% {left: -200%;}
-  70% {left: -200%;}
-  75% {left: -300%;}
-  95% {left: -300%;}
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
 }

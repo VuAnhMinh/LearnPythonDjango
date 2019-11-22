@@ -10,18 +10,16 @@
   </head>
   <body>
     <div class="row">
-      <div class="col-sm-2">
-        <a href="{% url 'home' %}">Trang chủ</a>
+      <div class="col-md-2">
+        <a href="{% url 'home' %}">Homepage</a>
       </div>
-      <div class="col-sm-10">
-
-      <center>
+      <div class="col-md-8 offset-md-2">
         <form class="" action="." method="POST">
           {% csrf_token %}
           {{form.as_p}}
-          <input type="submit" value="Đăng ký">
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <input type="submit" value="Confirm">
         </form>
-      </center>
       </div>
     </div>
   </body>

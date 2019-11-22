@@ -1,15 +1,16 @@
 {% load static %}
 
 <div class="footer-icons">
-  <a href="#" class = "footer-btn"> <i class="fab fa-facebook-f"></i> </a>
-  <a href="#" class = "footer-btn"> <i class="fab fa-twitter"></i> </a>
-  <a href="#" class = "footer-btn"> <i class="fab fa-github"></i> </a>
-  <a href="#" class = "footer-btn"> <i class="fab fa-skype"></i></i> </a>
+  <a href="https://www.facebook.com/VuAnhMinh.ggwp" class = "footer-btn" target="_blank"> <i class="fab fa-facebook-f"></i> </a>
+  <a href="https://twitter.com/MeenVuanh" class = "footer-btn" target="_blank"> <i class="fab fa-twitter"></i> </a>
+  <a href="https://github.com/VuAnhMinh" class = "footer-btn" target="_blank"> <i class="fab fa-github"></i> </a>
+  <a href="https://join.skype.com/invite/OIhYBvb5hH6I" class = "footer-btn" target="_blank"> <i class="fab fa-skype"></i></i> </a>
 </div>
 <hr>
 <div class="footer-menu">
   <ul>
     <li> <a href="/">Home</a> </li>
+    <li> <a href="{% url 'products:product_category' %}">Products</a> </li>
     <li> <a href="{% url 'blog_home' %}">Blog</a> </li>
     <li> <a href="{% url 'contact_home' %}">Contact</a> </li>
   </ul>
